@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/planIndex';
 import PostItem from './post_item';
 
-class App extends Component {
+class PlanApp extends Component {
   state = { post: '' };
 
   componentWillMount() {

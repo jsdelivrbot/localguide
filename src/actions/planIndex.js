@@ -1,4 +1,3 @@
-planIndex.js
 import _ from 'lodash';
 import {
   FETCH_POSTS,
