@@ -3,10 +3,8 @@ import {
   FETCH_POSTS,
   DELETE_POST,
   CREATE_POST,
-  UPDATE_POST
 } from './types';
 import * as firebase from 'firebase';
-
 
 // Initialize Firebase
   var config = {
@@ -22,8 +20,7 @@ import * as firebase from 'firebase';
 // const db = new firebase.database();
 // const ref = db.ref().child("data");
 
-
-const Posts = new Firebase('https://localguide-2d198.firebaseio.com/TripPlan');
+const Posts = new Firebase('https://localguide-2d198.firebaseio.com/Tours');
 
 export function fetchPosts() {
   return dispatch => {
@@ -44,29 +41,3 @@ export function createPost(post) {
 export function deletePost(key) {
   return dispatch => Posts.child(key).remove();
 }
-// export function updatePost(key) {
-//   return dispatch => Posts.child(key).update();
-// }
-
-// export function getPosts(post) {
-//   return dispatch => Posts.once("value", function (snapshot){
-//           const posts = [];
-//           snapshot.forEach(function(data){
-//             const post = {
-//               id: data.val().id,
-//               text: data.val().text
-//             }
-//             posts.push(post);
-//             that.setState({posts: posts});
-//           });
-//         });
-
-// }
-
-
-
-
-
-
-
-
